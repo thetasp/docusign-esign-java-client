@@ -1111,11 +1111,12 @@ public class ApiClient {
     conf.getSingletons().add(jsonProvider);
 
     // Force TLS v1.2
-    try {
-      System.setProperty("https.protocols", "TLSv1.2");
-    } catch (SecurityException se) {
-      System.err.println("failed to set https.protocols property");
-    }
+	//https://github.com/docusign/docusign-esign-java-client/issues/243
+ //   try {
+ //     System.setProperty("https.protocols", "TLSv1.2");
+  //  } catch (SecurityException se) {
+  //    System.err.println("failed to set https.protocols property");
+ //   }
     SSLContext ctx = null;
     try {
       ctx = SSLContext.getInstance("TLSv1.2");
