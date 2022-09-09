@@ -1125,7 +1125,7 @@ public class ApiClient {
       System.err.println("failed to initialize SSL context");
     }
     conf.getProperties().put(HTTPSProperties.PROPERTY_HTTPS_PROPERTIES, new HTTPSProperties(null, ctx));
-    HttpsURLConnection.setDefaultSSLSocketFactory(ctx.getSocketFactory());
+//    HttpsURLConnection.setDefaultSSLSocketFactory(ctx.getSocketFactory());
 
     Client client = Client.create(conf);
     if (debugging) {
